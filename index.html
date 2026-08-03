@@ -3,61 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>欢迎来到 Martin Sun 的个人主页</title>
+    <title>Martin Sun - 个人主页</title>
     <style>
+        * { box-sizing: border-box; }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
             padding: 20px;
-            box-sizing: border-box;
         }
-        .card {
-            background: white;
+        .container {
+            background: #ffffff;
             padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            max-width: 650px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            max-width: 680px;
             width: 100%;
         }
-        h1 { 
-            color: #0066cc; 
+        /* 个人信息头部 */
+        .profile-header {
             text-align: center;
-            margin-top: 0;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 25px;
             margin-bottom: 25px;
         }
-        .section-title {
-            font-size: 1.1em;
-            font-weight: bold;
-            color: #444;
-            border-bottom: 2px solid #0066cc;
-            padding-bottom: 5px;
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
             margin-bottom: 15px;
+            object-fit: cover;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
-        ul {
+        h1 {
+            font-size: 1.8rem;
+            margin: 0 0 8px 0;
+            color: #0f172a;
+        }
+        .subtitle {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        
+        /* 区域标题 */
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2563eb;
+            margin: 25px 0 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        /* 评价列表 */
+        ul.evaluation-list {
             padding-left: 20px;
             margin: 0;
         }
-        li {
-            line-height: 1.8;
+        ul.evaluation-list li {
+            line-height: 1.7;
             margin-bottom: 10px;
-            color: #555;
-            text-align: left;
+            color: #334155;
+        }
+        
+        /* 技能标签区 */
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .tag {
+            background-color: #eff6ff;
+            color: #1d4ed8;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        /* 联系方式按钮区 */
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        .btn-primary {
+            background-color: #2563eb;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+        }
+        .btn-outline {
+            background-color: #f1f5f9;
+            color: #475569;
+        }
+        .btn-outline:hover {
+            background-color: #e2e8f0;
         }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>你好，我是 Martin Sun 👋</h1>
-        
-        <div class="section-title">Self-evaluation</div>
-        
-        <ul>
+
+    <div class="container">
+        <div class="profile-header">
+            <img class="avatar" src="https://api.dicebear.com/7.x/bottts/svg?seed=Martin" alt="Martin's Avatar">
+            <h1>Martin Sun 👋</h1>
+            <p class="subtitle">Welcome to my personal homepage</p>
+            
+            <div class="social-links" style="justify-content: center; margin-top: 15px;">
+                <a href="mailto:your-email@example.com" class="btn btn-primary">📧 联系我</a>
+                <a href="https://github.com/martinsunyw5-dot" target="_blank" class="btn btn-outline">🐙 GitHub 主页</a>
+            </div>
+        </div>
+
+        <div class="section-title">💡 Self-evaluation</div>
+        <ul class="evaluation-list">
             <li>To be honest and modest, have strong ability to acquire new knowledge.</li>
             <li>Be Good at timing sense and number consciousness as well as the ability to independently develop key customers.</li>
             <li>To find out their potential demand, and lead the customers to make orders.</li>
@@ -65,6 +142,16 @@
             <li>Team work</li>
             <li>Approach target</li>
         </ul>
+
+        <div class="section-title">🚀 Core Skills</div>
+        <div class="tags-container">
+            <span class="tag">Business Development</span>
+            <span class="tag">Client Relationship</span>
+            <span class="tag">Team Leadership</span>
+            <span class="tag">Problem Solving</span>
+            <span class="tag">Project Management</span>
+        </div>
     </div>
+
 </body>
 </html>
