@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Martin Sun - 个人主页</title>
     <style>
+        /* 让头像在鼠标悬停时放大并旋转一点点 */
+.avatar {
+    transition: transform 0.3s ease; /* 设置平滑过渡时间 */
+}
+
+.avatar:hover {
+    transform: scale(1.1) rotate(5deg); /* 放大 1.1 倍，旋转 5 度 */
+}
+
+/* 让主卡片在悬停时浮起 */
+.container {
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px); /* 向上浮动 5 像素 */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12); /* 阴影变深 */
+}
         * { box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
